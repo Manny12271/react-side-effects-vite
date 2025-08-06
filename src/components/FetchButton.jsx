@@ -1,9 +1,8 @@
-// Step 1: Accept `fetchJoke` as a prop
-
-const FetchButton = ({ fetchJoke }) => {
+function FetchButton({ fetchJoke, loading }) {
   return (
-    // Step 2: Add an onClick event that calls `fetchJoke`
-    <button className="fetch-button">Get a New Joke</button>
+    <button onClick={fetchJoke} disabled={loading}>
+      Get a New Joke
+    </button>
   )
 }
 
